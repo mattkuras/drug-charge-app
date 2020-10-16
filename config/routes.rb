@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/drug_charge', to: 'home#show'
+  post '/drug_charge', to: 'home#create'
 
   root 'home#index'
 
