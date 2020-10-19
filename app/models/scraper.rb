@@ -12,6 +12,7 @@ class Scraper
         # store the tables into an array of objects 
 
         doc = open(url)        
+        # byebug
         html = doc.read
         table = find_table(html)
         Table.new(table)
@@ -25,6 +26,22 @@ class Scraper
         start = html.index('<tbody>')
         ending = html.index('</tbody>')
         table = html[start..ending]
+        replacements = {
+            '<li>' => '',
+            '</li>' => '',
+            '<ul>' => '',
+            '</ul>' => '',
+            '<a' => '',
+            '<p>' => '',
+            '</p>' => '',
+            '<br />' => '',
+            '<u>' => '',
+            '</u>' => ''
+        }
+        Table.clean_content(table)
+
+        table.gsub!(/<li>|<\/li>|<\/p>|<p>|<ul>|<\/a>|<\/ul>|<\/td>|<br \/>|<b>|<\/b>|<i>|<\/i>|<sup>|<\/sup>|<u>|<\/u>/) { |match| replacements[match] }
+
     end
 
 end
