@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import ChargeSearchForm from './search/chargeSearchForm'
+import Results from './results/results'
 const App = () => {
 
     const [drugCharge, setDrugCharge] = useState()
@@ -11,7 +12,7 @@ const App = () => {
         <div className='app'>
             <p>App component</p>
             <ChargeSearchForm getDrugCharge={getDrugCharge}/>
-            {/* display results component */}
+            <Results results={drugCharge}/>
         </div>
     )
 }
