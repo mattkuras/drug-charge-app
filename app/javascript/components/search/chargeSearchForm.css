@@ -1,8 +1,36 @@
-form {
-    display: flex;
-    flex-direction: column;
+.form-container {
+    margin: auto;
+    border: black solid 2px;
+    width: 75%;
+    height: 150px;
+    /* justify-content: center; */
+    background: #1a203b;
+    border-radius: 18px;
+    opacity: 90%;
 }
 
+form {
+    display: flex;
+    align-content: stretch;
+    justify-content: space-around;
+ } 
+
 select {
-    margin: 50px;
+    margin: 40px 5px;
+    height: 75px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    align-self: center;
+}
+
+button {
+    height: 75px;
+    width: 200px;
+    border-radius: 10px;
+    background:#eb9826;
+    align-self: center;
+    color: white;
+    font-size: 2rem;
 }

@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios'
+import './chargeSearchForm.css'
 
 const chargeSearchForm = (props) => {
 
@@ -49,31 +50,33 @@ const chargeSearchForm = (props) => {
         }
         axios.post('/drug_charge', drugCharge)
         .then(resp => props.getDrugCharge(resp.data))
+
     }
 
     return(
         <div className='form-container'>
             <form>
-                <select 
+                <select className='state-select'
                     onChange={e => setEstado(e.target.value)}
                     value={estado}
                 >
                     {stateOptions}                   
                 </select>
-                <select 
+                <select className='drug-select'
                     onChange={e => setDrug(e.target.value)}
                     value={drug}
                 >
                     {drugOptions}
                 </select>
-                <select 
+                <select className='charge-select'
                     onChange={e => setCharge(e.target.value)}
                     value={charge}
                 >
                     {chargeOptions}
                 </select>
+                <button onClick={handleClick}>submit</button>
             </form>
-            <button onClick={handleClick}>submit</button>
+           
         </div>
     )
 }
