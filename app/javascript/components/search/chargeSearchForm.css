@@ -1,7 +1,7 @@
 .form-container {
     margin: auto;
     border: black solid 2px;
-    width: 75%;
+    width: 60%;
     height: 150px;
     /* justify-content: center; */
     background: #1a203b;
@@ -33,4 +33,9 @@ button {
     align-self: center;
     color: white;
     font-size: 2rem;
+}
+
+option {
+    text-align: center;
+    justify-content: center;
 }
