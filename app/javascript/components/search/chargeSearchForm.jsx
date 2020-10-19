@@ -18,7 +18,7 @@ const chargeSearchForm = (props) => {
         </option>
     ))
 
-    const drugs = ['Choose a Drug', 'Cocaine', 'Marijuana', 'Heroine']
+    const drugs = ['Choose a Drug', 'Cocaine', 'Marijuana', 'Heroin']
     const drugOptions = drugs.map(drug => (
         <option 
             name='drug' 
