@@ -7,7 +7,7 @@ class Table
     end
 
     def possession
-        content = find_content('Possession') 
+        content = find_content('>Possession') 
         Table.clean_content(content)
     end
     
@@ -28,7 +28,7 @@ class Table
         if table.index(selector) == nil 
             content = 'cannot find content'
         else
-            selector_location = table.index(selector)
+            selector_location = table.index(selector) + 1 
             start_of_content = table[selector_location..-1].index('>') + selector_location + 1
             finish_of_content = table[start_of_content..-1].index('</tr>') + (start_of_content - 1)
             content = table[start_of_content..finish_of_content]

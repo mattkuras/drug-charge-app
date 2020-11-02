@@ -10,9 +10,11 @@
     background: white;
     width: 30%;
     height: 100px;
+    opacity: 85%;
 }
 
 h1 {
     font-family: 'Anton', sans-serif;
     margin: auto;
+    font-size: 2.5rem;
 }
